@@ -11,13 +11,11 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const { cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
-const dotenv = require("dotenv");
+require("dotenv").config();
 
 // Setting up port number
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
-// Loading environment variables from .env file
-dotenv.config();
 
 // Connecting to database
 database.connect();
